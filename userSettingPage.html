@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="userPage.css">
+<title>User</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-12 mt-5">
+                   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                       <ul class="nav ">
+                       <li class="nav-item">
+                       <a class="nav-link active" href="#">Home <span style="margin-left: 10px;">/</span></a>
+                       </li>
+                       <li class="nav-item">
+                       <a class="nav-link" href="#">User <span style="margin-left: 10px;">/</span></a>
+                       </li>
+                       <li class="nav-item">
+                       <a class="nav-link disabled" href="#" style="color: #9e9e9e">Profile Settings</a>
+                       </li>
+                       </ul>
+                       </nav>
+               </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="menuControl d-md-block d-none">
+                        <div class="card-body">
+                            <nav class="nav d-block">
+                                <a href="#profile" class="nav-link " aria-current="page" data-toggle="tab">
+                                    <i class="fas fa-user"></i>
+                                     Profile
+                                </a>
+                                <a href="#security" class="nav-link active" data-toggle="tab">
+                                    <i class="fas fa-shield-alt"></i>
+                                     Security
+                                </a>
+                                <a href="#notification" class="nav-link" data-toggle="tab">
+                                    <i class="far fa-bell"></i>
+                                     Notification
+                                </a>
+                                <a href="#billing" class="nav-link" data-toggle="tab">
+                                    <i class="fab fa-hornbill"></i>
+                                     Billing
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-8">
+                    <div class="card d-md-none">
+                        <div class="card-header border-bottom mb-3 headerMenuTab">
+                            <ul class="nav nav-tabs card-header-tabs nav-fill">
+                               <li class="nav-item">
+                                    <a data-toggle="tab" href="#profile" class="nav-link " aria-current="page"><i class="fas fa-user"></i></a>
+                               </li> 
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#security" class="nav-link active"><i class="fas fa-shield-alt"></i></a>
+                               </li> 
+                               <li class="nav-item">
+                                    <a data-toggle="tab" href="#Notification" class="nav-link"><i class="far fa-bell"></i></a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#Billing" class="nav-link"><i class="fab fa-hornbill"></i></a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- content user profile -->
+                    <!-- <div class="content tab-content" style="display: none;">
+                        <div class="profileContent">
+                            <div class="row">
+                                <div class="col-md-12 headerProfile">
+                                        <p>YOUR PROFILE INFORMATION</p>
+                                        <div class="iconAction">
+                                            <span class="saveAsProfiles"><i class="fas fa-pen"></i></span>
+                                            <span class="moreOptions"><i class="fas fa-ellipsis-v"></i></span>
+                                        </div>
+                                        <div class="dropdownOption" style="display: none;">
+                                           <div class="col-md-12 deleteUser">
+                                               <p><i class="far fa-trash-alt" style="color:#757575;"></i><span>Delete User</span></p>
+                                           </div>
+                                           <div class="col-md-12 ressetPassword">
+                                               <p><i class="fas fa-redo" style="color: #757575;"></i><span>Reset Password</span></p>
+                                           </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                        <form action="POST" action="javascript:void(0)" class="validate">
+                               <div class="row contentControl">
+                                   <div class="col-md-12">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <label for="firstName" class="focusInputLabelFirstName">First Name</label>
+                                              <input type="text" name="firstName" id="firstName" class="firstName  mask alpha obj">
+                                              <span class="errorFirstName" style="display: none;">Required First Name!</span>
+                                          </div>
+                                          <div class="col-md-4">
+                                              <label for="lastName" class="focusInputLabelLastName">Last Name</label>
+                                              <input type="text" name="lastName" id="lastName" class="lastName  mask alpha obj">
+                                              <span class="errorLastName" style="display: none;">Required Last Name!</span>
+                                         </div>
+                                         <div class="col-md-4">
+                                              <input type="date" name="birthDay" id="birthDay" class="birthDay">
+                                              <span class="errorLastName" style="display: none;">Required BirthDay</span>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-md-12 mt-5">
+                                      <div class="row">
+                                               <div class="col-md-4" >
+                                                   <select name="" id="" class="select2 gender">
+                                                       <option value="">Gender</option>
+                                                       <option value="0">Male</option>
+                                                       <option value="1">Female</option>
+                                                   </select>
+                                           </div>
+                                           <div class="col-md-4">
+                                                   <label for="phoneNumber" class="focusInputLabelPhoneNumber ">Phone number</label>
+                                                   <input type="text" name="phoneNumber" id="phoneNumber" class="phoneNumber mask nospace num obj">
+                                                   <span class="errorphoneNumber" style="display: none;">Required phoneNumber</span>
+                                           </div>
+                                           <div class="col-md-4">
+                                               <select name="" id="" class="select2 role">
+                                                   <option value="">Roles</option>
+                                                   <option value="0">Male</option>
+                                               </select>
+                                           </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-md-12 mt-5">
+                                       <div class="row">
+                                           <div class="col-md-12">
+                                               <label for="email" class="focusInputLabelEmail ">Email</label>
+                                               <input type="text" name="Email" id="Email" class="Email mask obj email">
+                                               <span class="errorEmail" style="display: none;">Required Email</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="col-md-12 mt-5">
+                                       <div class="row">
+                                           <div class="col-md-12">
+                                               <label for="Address" class="focusInputLabelAddress " >Address</label>
+                                               <input type="text" name="Address" id="Address" class="Address mask obj">
+                                               <span class="errorAddress" style="display: none;">Required Address</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </form>
+                        </div>
+                    </div> -->
+                    <div class="card-body tab-content">
+                            <div class="tab-pane " id="profile"> 
+                                <div class="content">
+                                    <div class="profileContent">
+                                        <div class="row">
+                                            <div class="col-md-12 headerProfile">
+                                                    <p>PROFILE</p>
+                                                    <div class="iconAction">
+                                                        <span class="saveAsProfiles"><i class="fas fa-pen"></i></span>
+                                                        <span class="moreOptions"><i class="fas fa-ellipsis-v"></i></span>
+                                                    </div>
+                                                    <div class="dropdownOption" style="display: none;">
+                                                       <div class="col-md-12 deleteUser">
+                                                           <p><i class="far fa-trash-alt" style="color:#757575;"></i><span>Delete User</span></p>
+                                                       </div>
+                                                       <div class="col-md-12 ressetPassword">
+                                                           <p><i class="fas fa-redo" style="color: #757575;"></i><span>Reset Password</span></p>
+                                                       </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <!-- form content profile -->
+                                        <form  action="POST" action="javascript:void(0)" class="validate">
+                                                <div class="form-row contentControl">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputUserName">UserName</label>
+                                                        <input type="text" class="form-control" id="inputUserName" readonly>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputEmail">Email</label>
+                                                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your Email">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputFirstName">First Name</label>
+                                                        <input type="text" class="form-control" id="inputFirstName" placeholder="Enter your First Name">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Last Name</label>
+                                                        <input type="text" class="form-control" id="inputLastName" placeholder="Enter your Last Name">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputPhone">Phone</label>
+                                                        <input type="text" class="form-control" id="inputPhone" placeholder="Enter your Phone Number">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputBirthDay">BirthDay</label>
+                                                        <input type="date" class="form-control" id="inputBirthDay">
+                                                    </div>
+                                                    <div class="form-group col-md-6 genderSelect" style="margin-left: 15px;">
+                                                        <label for="inputGender" style="margin-left: 0px;">Gender</label>
+                                                            <select name="" id="Gender" class="select2 gender" style="width: 90%;">
+                                                                <option value="">Gender</option>
+                                                                <option value="0">Male</option>
+                                                                <option value="1">Female</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="form-group col-md-5 roleSelect" style="margin-left: 0;">
+                                                        <label for="inputRole" style="margin-left: 0px;" class="labelRoleSelect">Role</label>
+                                                            <select name="" id="role" class="select2 role" style="width: 110%;">
+                                                                <option value="">Role</option>
+                                                                <option value="">Male</option>
+                                                                <option value="">Female</option>
+                                                            </select>
+                                                    </div>
+
+                                                    <div class="form-group col-md-12">
+                                                        <label for="inputAddress">Address</label>
+                                                        <input type="text" class="form-control" id="inputAddress" placeholder="Enter your Address" style="width: 95%">
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane active" id="security">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-- change password -->
+                                        <div class="login" id="login">
+                                            <div class="col-md-12" style="padding: 0">
+                                                 <p class="textLoginHeader" style="margin: 0;">Login</p>
+                                            </div>
+                                            <div class="card">
+                                                    <div class="" id="headingOne">
+                                                        <div class="col-md-12 changePassword" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                            <p><i class="fas fa-key"></i><span class="textTopChange">Change Password</span> <p class="textChangePass">You should use a strong password that you have not used anywhere else</p></p>
+                                                            <button class="btn btnEditPassordShow">Edit</button>
+                                                        </div>
+                                                    </div>
+                                                <div class="col-md-12 contentChangePassword collapse in" id="collapseOne">
+                                                    <div class="card-body">
+                                                         <div class="row formContentChange">
+                                                             <div class="col-md-4">
+                                                                <label for="inputCurrentPassword" class="label-contentPassword">Current Password : </label>
+                                                                <label for="inputNewPassword"  class="label-contentPassword">New Password : </label>
+                                                                <label for="inputEnterTheNewPassword"  class="label-contentPassword">Enter The New Password : </label>
+                                                                <div class="col-md-12" id="forgotPassword">
+                                                                    <a href="">Forgot password?</a>
+                                                                </div>
+                                                             </div>
+                                                             <div class="col-md-6 contentFormInput">
+                                                                <form action="" class="formChangePassword">
+                                                                        <div class="col-md-12">
+                                                                            <input type="password" name="currentPassword" id="currentPassword">
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <input type="password" name="newPassword" id="newPassword">
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <input type="password" name="enterNewPassword" id="enterNewPassword">
+                                                                        </div>
+                                                                </form>
+                                                             </div>
+                                                             <div class="col-md-2"></div>
+                                                         </div>
+                                                         <div class="row btnSaveChange">
+                                                             <div class="col-md-3">
+                                                                 <button class="btn btnSavePassword">Save Change</button>
+                                                             </div>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="" id="headingTwo">
+                                                    <div class="col-md-12 changePassword" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        <p><i class="far fa-user-circle"></i><span class="textTopChange">use two-factor authentication</span> <p class="textChangePass"> <span id="statusSaveLogin" style="color:blue; font-weight: bold;">.ON</span> We'll let you know if someone logs in from a device or browser you don't normally use</p></p>
+                                                        <button class="btn btnEditPassordShow">Edit</button>
+                                                    </div>
+                                                    <div class="col-md-12 contentSaveCookie collapse show" id="collapseTwo" style="background-color: #212121;">
+                                                        <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <label for="" style="position: absolute; top: 45%; margin-left: 40px; color: #757575;">Re-enter your password : </label>
+                                                                </div>
+                                                                <div class="col-md-8" style="border-bottom: 1px solid #757575;">
+                                                                    <div class="browserCurrent">
+                                                                    <div class="col-md-12 mt-3">
+                                                                        <form action="">
+                                                                            <input type="password" name="rePassword" id="rePassword">
+                                                                            <div style="margin-top: 10px;">
+                                                                                <a href="">Forgot password?</a>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <button class="btn btnSubmitPassword">Next</button>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <!-- change password -->
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- content user profile -->
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="innerValidationForm.js"></script>
+<script src="userPage.js"></script>
+</body>
+</html>
